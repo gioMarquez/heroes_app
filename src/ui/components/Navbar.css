@@ -1,0 +1,27 @@
+.containerGeneral {
+    @apply bg-gray-700 text-white p-2
+}
+
+.container__nav {
+    @apply  text-white w-full bg-white  grid text-2xl justify-items-center border border-gray-200 h-12 mb-2 rounded-3xl
+}
+
+.navItem {
+    @apply hover:bg-selected-navItem/10 bg-white w-full h-full text-center  text-black hover:border hover:border-blue-400 hover:border-b-2 pt-1 hover:rounded-3xl
+}
+
+.itemUser {
+    @apply text-purple-600 underline hover:bg-selected-navItem/10 hover:text-glue-500 hover:border-blue-400 hover:border-b-2 pt-2 hover:rounded-3xl
+}
+
+.logOut {
+    @apply text-red-500 hover:bg-selected-navItem/10 hover:text-glue-500 hover:border-blue-400 hover:border-b-2 pt-2 hover:rounded-3xl
+}
+
+.containerUserOptions {
+    @apply col-span-3 mb-2 font-semibold grid grid-cols-2 text-center rounded-3xl text-base 
+}
+
+.title {
+    @apply  col-span-3 mb-2 flex justify-center text-2xl pt-1
+}
