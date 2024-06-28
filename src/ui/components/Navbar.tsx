@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const navigateOptions = [
 	// { id: 0, name: "Asociaciones", to: "/" },
@@ -10,10 +10,21 @@ const navigateOptions = [
 
 
 const Navbar = () => {
+
+    //States to handle the section selected and redirecto to they routes
 	const [idSelected, setIdSelected] = useState(1);
     const verifySelected = (idElement: number) => {
         return idSelected === idElement ? "bg-selected-navItem/10 text-glue-500 rounded-3xl border-blue-400 border-b-2" : "rounded-3xl";
       };
+
+    const navigate = useNavigate();
+
+      const onLogout = () => {
+        console.log("logout")
+        navigate('/login', {
+            replace: true
+        })
+      }
 
 	return (
         <>
@@ -33,7 +44,7 @@ const Navbar = () => {
             </div>
             <div className="containerUserOptions">
                 <div className="itemUser">Jhovanny</div>
-                <div className="logOut">logout</div>
+                <div className="logOut" onClick={onLogout}>logout</div>
             </div>
 		</div>
         </>
