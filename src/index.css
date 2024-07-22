@@ -8,20 +8,24 @@
 
 /* Border Animation */
 
+/* src/styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Border Animation */
 .super-border {
-     /*border-radius: 5%;
-     *//*Aseguraqueelbordesearedondeado*/position: relative;
-     display: inline-block;
-     /*Aseguraqueelcontenedorseajustealtamañodelcontenido*/padding: 5px;
-     /*Ajustaelgrosordelborde*/border-radius: 2px;
-     background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
-     background-size: 400%;
-     animation: super-border 20s linear infinite;
-     -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
-     -ms-border-radius: 8px;
-     -o-border-radius: 8px;
-     -webkit-animation: super-border 20s linear infinite;
+  position: relative;
+  display: inline-block; /* Ajusta el tamaño al contenido */
+  padding: 5px; /* Ajusta el grosor del borde */
+  border-radius: 8px; /* Redondeo del borde */
+  background: transparent; /* Fondo transparente por defecto */
+}
+
+.super-border:hover {
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 400%;
+  animation: super-border 20s linear infinite;
 }
 
 @keyframes super-border {
@@ -36,13 +40,15 @@
   }
 }
 
-.super-border:after {
+.super-border:hover:after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  filter: blur(5px); /* Ajusta el desenfoque si es necesario */
+  border-radius: inherit; /* Asegura que el desenfoque siga el redondeo del contenedor */
+  filter: blur(50px); /* Ajusta el desenfoque si es necesario */
   z-index: -1;
 }
+

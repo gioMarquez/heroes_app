@@ -6,7 +6,7 @@ const MhaPage = () => {
 		(mhaHero) => mhaHero.publisher === "My Hero Academia"
 	);
 	return (
-		<div>
+		<div className="bg-black text-white">
 			<h1 className="text-2xl text-blue-500 font-semibold">
 				My Hero Academia Heroes
 			</h1>
