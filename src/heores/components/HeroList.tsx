@@ -9,11 +9,11 @@ const HeroList = ({ publisher }: HeroListProps) => {
 	const heroes = getHeoresByPublisher(publisher);
 
 	return (
-		<div className="bg-red-200 grid grid-cols-4">
+		<div className="bg-black grid grid-cols-4">
 			{heroes.map((hero) => (
 				<div>
 					<HeroCard nameHero={hero.superhero} id={hero.id} />
-					<p className="text-center font-bold text-blue-700">
+					<p className="text-center font-medium text-blue-300">
 						id: {hero.id}
 					</p>
 				</div>
