@@ -1,4 +1,4 @@
-import { HeroCard } from "../components";
+import { HeroCard, HeroDetails } from "../components";
 import { heroes } from "../data/HeroesData";
 
 const MhaPage = () => {
@@ -15,9 +15,10 @@ const MhaPage = () => {
 				{myHeroesA.map((hero) => (
 					<HeroCard key={hero.id} nameHero={hero.superhero} id={hero.id} />
 				))}
-				{/* <pre>
-          {JSON.stringify(myHeroesA,null,3)}
-        </pre> */}
+				
+				<div className="bg-white text-blue-500">
+					<HeroDetails />
+				</div>
 			</div>
 		</div>
 	);
