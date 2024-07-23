@@ -4,9 +4,9 @@ import { DcPage, HeroPage, MarvelPage, MhaPage, SearchPage } from '../pages'
 
 const HeroesRoutes = () => {
   return (
-    <>
+    <div className='bg-black'>
         <Navbar />
-        <div className='mx-20 my-12'>
+        <div className='mx-20 mt-12 pb-4  h-screen'>
 
         <Routes>
                 <Route path="marvel" element={ <MarvelPage />} />
@@ -20,7 +20,7 @@ const HeroesRoutes = () => {
         </Routes>
         </div>
 
-    </>
+    </div>
   )
 }
 
