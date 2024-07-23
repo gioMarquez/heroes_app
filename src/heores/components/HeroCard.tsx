@@ -27,22 +27,22 @@ const HeroCard = ({ nameHero, id }: { nameHero: string; id: string }) => {
   };
 
   return (
-    <div
-      key={id}
-      className="p-4 text-xl font-bold flex flex-col items-center hover:-translate-y-2 duration-200 opacity-70 hover:opacity-100"
-    >
-      <p className="mb-2">{nameHero}</p>
-      <div className="super-border">
-        <img
-          src={imageH()}
-          alt="HeroIcon"
-          className="size-40 rounded-3xl"
-          onError={(e) => {
-            e.currentTarget.src = DefaultIconHero;
-          }}
-        />
-      </div>
-    </div>
+		<div
+			key={id}
+			className="p-4 text-xl font-normal flex flex-col items-center hover:-translate-y-2 duration-200 opacity-70 hover:opacity-100 hover:text-blue-200 hover:font-bold font-mono"
+		>
+			<p className="mb-2">{nameHero}</p>
+			<div className="super-border">
+				<img
+					src={imageH()}
+					alt="HeroIcon"
+					className="size-40 rounded-3xl"
+					onError={(e) => {
+						e.currentTarget.src = DefaultIconHero;
+					}}
+				/>
+			</div>
+		</div>
   );
 };
 

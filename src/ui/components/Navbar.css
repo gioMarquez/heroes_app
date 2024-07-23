@@ -11,11 +11,11 @@
 }
 
 .itemUser {
-    @apply text-purple-600 underline hover:bg-selected-navItem/10 hover:text-glue-500 hover:border-blue-400 hover:border-b-2 pt-2 hover:rounded-3xl
+    @apply text-purple-100 underline hover:bg-selected-navItem/10 hover:text-glue-500 hover:border-blue-400 hover:border-b-2 pt-2 hover:rounded-3xl
 }
 
 .logOut {
-    @apply text-red-500 hover:bg-selected-navItem/10 hover:text-glue-500 hover:border-blue-400 hover:border-b-2 pt-2 hover:rounded-3xl
+    @apply text-red-400 hover:bg-selected-navItem/10 hover:text-glue-500 hover:border-blue-400 hover:border-b-2 pt-2 hover:rounded-3xl
 }
 
 .containerUserOptions {
