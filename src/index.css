@@ -4,15 +4,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-
-
-/* Border Animation */
-
-/* src/styles.css */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 /* Border Animation */
 .super-border {
   position: relative;
@@ -40,15 +31,15 @@
   }
 }
 
-.super-border:hover:after {
+.super-border:hover::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: -20px; /* Ajusta este valor para expandir el área del pseudo-elemento */
+  left: -20px; /* Ajusta este valor para expandir el área del pseudo-elemento */
+  right: -20px; /* Ajusta este valor para expandir el área del pseudo-elemento */
+  bottom: -20px; /* Ajusta este valor para expandir el área del pseudo-elemento */
   border-radius: inherit; /* Asegura que el desenfoque siga el redondeo del contenedor */
+  background: inherit; /* Usa el mismo fondo que el contenedor principal */
   filter: blur(50px); /* Ajusta el desenfoque si es necesario */
   z-index: -1;
 }
-
