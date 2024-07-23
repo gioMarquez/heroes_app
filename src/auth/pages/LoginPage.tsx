@@ -10,21 +10,25 @@ const LoginPage = () => {
 	};
 
 	return (
-		<div className=" m-5 bg-white">
-			<h1 className="text-3xl font-thin">Login</h1>
+		<div className="m-5 bg-white">
+			<div className="flex items-center justify-center h-20 bg-blue-300">
+				<h1 className="text-3xl font-thin">Login</h1>
+			</div>
 			<hr />
 
-			<div className="mb-4"></div>
-
-			<button
-				onClick={() => onLogin()}
-				className="btn relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-indigo-100 rounded hover:bg-white group py-1.5 px-2.5 w-48 "
-			>
-				<span className="w-56 h-48 rounded bg-indigo-600 absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-				<span className="relative w-full text-center text-indigo-600 transition-colors duration-300 ease-in-out group-hover:text-white">
-					Login
-				</span>
-			</button>
+			<div className="flex items-center justify-center h-64">
+				{" "}
+				{/* Ajusta la altura según tus necesidades */}
+				<button
+					onClick={onLogin}
+					className="btn relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-indigo-100 rounded hover:bg-white group py-1.5 px-2.5 w-48"
+				>
+					<span className="w-56 h-48 rounded bg-indigo-600 absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+					<span className="relative w-full text-center text-indigo-600 transition-colors duration-300 ease-in-out group-hover:text-white">
+						Login
+					</span>
+				</button>
+			</div>
 		</div>
 	);
 };
